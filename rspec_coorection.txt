@@ -1,0 +1,115 @@
+rspec ./spec/controllers/admin/ach_imports_controller_spec.rb:23 # Admin::AchImportsController POST #create imports the ach file
+
+rspec ./spec/controllers/admin/batch_controller_spec.rb:18 # Admin::BatchController get batch details returns the correct check_amount and amount_so_far in work_list page
+
+rspec ./spec/controllers/admin/facility_controller_spec.rb:25 # Admin::FacilityController creating a facility passing params and creating facility with ADMIN role saves the facility successfully with Mandatory INS SVC unchecked & Claim Level EOBs checked
+
+rspec ./spec/controllers/admin/facility_controller_spec.rb:35 # Admin::FacilityController creating a facility passing params and creating facility with ADMIN role saves the facility successfully with Mandatory INS SVC checked & Claim Level EOBs unchecked
+
+rspec ./spec/controllers/admin/facility_controller_spec.rb:45 # Admin::FacilityController creating a facility passing params and creating facility with ADMIN role does not save facility with Mandatory INS SVC checked & Claim Level EOBs checked
+
+rspec ./spec/controllers/associations_controller_spec.rb:66 # Api::V1::AssociationsController GET #index should return association records with same remit records
+
+rspec ./spec/controllers/associations_controller_spec.rb:83 # Api::V1::AssociationsController GET #index should not return association records but return error codes for invalid input by webservice
+
+rspec ./spec/controllers/associations_controller_spec.rb:89 # Api::V1::AssociationsController GET #index should not return association records but return error codes for invalid input by webservice
+
+rspec ./spec/controllers/associations_controller_spec.rb:95 # Api::V1::AssociationsController GET #index should not return association records but return error codes for missing input by webservice
+
+rspec ./spec/controllers/associations_controller_spec.rb:105 # Api::V1::AssociationsController GET #show should return remit and selected associated payment by webservice
+
+rspec ./spec/controllers/associations_controller_spec.rb:121 # Api::V1::AssociationsController GET #show should not return remit and selected associated payment with invalid input by webservice
+
+rspec ./spec/controllers/associations_controller_spec.rb:127 # Api::V1::AssociationsController GET #show should not return remit and selected associated payment with missing input by webservice
+
+rspec ./spec/controllers/associations_controller_spec.rb:133 # Api::V1::AssociationsController GET #show should return error codes for blank output for getting remit and selected associated payment
+
+rspec ./spec/controllers/associations_controller_spec.rb:143 # Api::V1::AssociationsController POST #create should return but not update an association which is existing and is active
+
+rspec ./spec/controllers/associations_controller_spec.rb:157 # Api::V1::AssociationsController POST #create should not update an association which is existing and is inactive
+
+rspec ./spec/controllers/associations_controller_spec.rb:171 # Api::V1::AssociationsController POST #create should create an association which is not existing
+
+rspec ./spec/controllers/associations_controller_spec.rb:187 # Api::V1::AssociationsController POST #create should not create an association which is existing and is active
+
+rspec ./spec/controllers/associations_controller_spec.rb:197 # Api::V1::AssociationsController POST #create should create an association with confidence level which is not existing
+
+rspec ./spec/controllers/associations_controller_spec.rb:213 # Api::V1::AssociationsController POST #create should create an association without payment
+
+rspec ./spec/controllers/payments_controller_spec.rb:84 # Api::V1::PaymentsController GET #index should return unreleased payments with filter on check_amount with tolerance
+
+rspec ./spec/controllers/payments_controller_spec.rb:100 # Api::V1::PaymentsController GET #index
+
+should return unreleased payments with filter on check_amount without tolerance
+
+rspec ./spec/controllers/payments_controller_spec.rb:116 # Api::V1::PaymentsController GET #index should return unreleased payments with filter on check_number with leading zeroes
+
+rspec ./spec/controllers/payments_controller_spec.rb:132 # Api::V1::PaymentsController GET #index should return unreleased payments without filter on check_number with leading zeroes
+
+rspec ./spec/controllers/payments_controller_spec.rb:148 # Api::V1::PaymentsController GET #index should return unreleased payments with filter on facility, check_number and eob_type by webservice
+
+rspec ./spec/controllers/payments_controller_spec.rb:166 # Api::V1::PaymentsController GET #index should return not unreleased payments with invalid data in filter on facility, check_number and eob_type by webservice
+
+rspec ./spec/controllers/payments_controller_spec.rb:178 # Api::V1::PaymentsController GET #index should return error code for blank unreleased payments
+
+rspec ./spec/controllers/payments_controller_spec.rb:194 # Api::V1::PaymentsController GET #index should return excluded payments by webservice
+
+rspec ./spec/controllers/payments_controller_spec.rb:209 # Api::V1::PaymentsController GET #index should return excluded payments with search filter on confirmation code by webservice
+
+rspec ./spec/controllers/payments_controller_spec.rb:224 # Api::V1::PaymentsController GET #index should return auto excluded payments by webservice
+
+rspec ./spec/controllers/payments_controller_spec.rb:241 # Api::V1::PaymentsController GET #index should return manually excluded payments by webservice
+
+rspec ./spec/controllers/payments_controller_spec.rb:258 # Api::V1::PaymentsController GET #index should not return excluded payments with invalid input by webservice
+
+rspec ./spec/controllers/payments_controller_spec.rb:268 # Api::V1::PaymentsController GET #index should return error codes for blank output for getting excluded payments
+
+rspec ./spec/controllers/payments_controller_spec.rb:287 # Api::V1::PaymentsController POST #update should exclude payment which is partially matched with a remit associated only to it
+
+rspec ./spec/controllers/payments_controller_spec.rb:323 # Api::V1::PaymentsController POST #update should exclude payment with confirmation code with special characters
+
+rspec ./spec/controllers/payments_controller_spec.rb:341 # Api::V1::PaymentsController POST #update should exclude payment which is partially matched with a remit associated with other payments
+
+rspec ./spec/controllers/payments_controller_spec.rb:378 # Api::V1::PaymentsController POST #update should exclude payments by webservice
+
+rspec ./spec/controllers/payments_controller_spec.rb:405 # Api::V1::PaymentsController POST #update should not exclude payments with invalid one input by webservice
+
+rspec ./spec/controllers/payments_controller_spec.rb:416 # Api::V1::PaymentsController POST #update should not exclude payments with invalid input by webservice
+
+rspec ./spec/controllers/payments_controller_spec.rb:427 # Api::V1::PaymentsController POST #update should not exclude payments with blank input by webservice
+
+rspec ./spec/controllers/payments_controller_spec.rb:441 # Api::V1::PaymentsController POST #update should recall an associated payment by webservice
+
+rspec ./spec/controllers/payments_controller_spec.rb:464 # Api::V1::PaymentsController POST #update should recall a manually excluded payment by webservice
+
+rspec ./spec/controllers/payments_controller_spec.rb:487 # Api::V1::PaymentsController POST #update should not do recall with invalid input by webservice
+
+rspec ./spec/controllers/releases_controller_spec.rb:94 # Api::V1::ReleasesController GET #new should release remit along with a payment which is associated with payments by method new
+
+rspec ./spec/controllers/releases_controller_spec.rb:133 # Api::V1::ReleasesController GET #new should return error objects for invalid input by webservice
+
+rspec ./spec/controllers/releases_controller_spec.rb:145 # Api::V1::ReleasesController GET #new should return error objects for blank balancing type
+
+rspec ./spec/controllers/releases_controller_spec.rb:162 # Api::V1::ReleasesController GET #new should return error objects for blank input
+
+rspec ./spec/controllers/releases_controller_spec.rb:177 # Api::V1::ReleasesController GET #new should return error objects for blank output
+
+rspec ./spec/controllers/releases_controller_spec.rb:199 # Api::V1::ReleasesController POST #create should release remit and payment, another remit associated with the payment becomes unassociated
+
+rspec ./spec/controllers/releases_controller_spec.rb:270 # Api::V1::ReleasesController POST #create should release remit along with a payment which is associated with payments by webservice
+
+rspec ./spec/controllers/releases_controller_spec.rb:331 # Api::V1::ReleasesController POST #create should release remit with confirmation code
+
+rspec ./spec/controllers/releases_controller_spec.rb:352 # Api::V1::ReleasesController POST #create should release remit without balancing check type when amount is zero
+
+rspec ./spec/controllers/releases_controller_spec.rb:373 # Api::V1::ReleasesController POST #create should return error objects for invalid input by webservice
+
+rspec ./spec/controllers/releases_controller_spec.rb:385 # Api::V1::ReleasesController POST #create should return error objects for blank balancing type
+
+rspec ./spec/controllers/releases_controller_spec.rb:402 # Api::V1::ReleasesController POST #create should return error objects for blank input
+
+rspec ./spec/controllers/releases_controller_spec.rb:417 # Api::V1::ReleasesController POST #create should return error objects for blank output
+
+rspec ./spec/controllers/releases_controller_spec.rb:435 # Api::V1::ReleasesController POST #create should release remit alone without no associated payments
+
+rspec ./spec/controllers/releases_controller_spec.rb:494 # Api::V1::ReleasesControls
