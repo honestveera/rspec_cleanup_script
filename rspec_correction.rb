@@ -1,4 +1,4 @@
-file = File.read("revremit_correction.txt")
+file = File.read("rspec_correction.txt")
 f = file.split("\n")
 file_name_arr = f.map{|a| a.split(" # ")[0] }
 
